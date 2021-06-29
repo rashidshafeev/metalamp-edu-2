@@ -1,0 +1,20 @@
+{
+  "name": "metalamp-edu-2",
+  "version": "1.0.0",
+  "description": "MetaLamp education, 2nd task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rashidshafeev/metalamp-edu-2.git"
+  },
+  "keywords": [],
+  "author": "Rashid Shafeev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rashidshafeev/metalamp-edu-2/issues"
+  },
+  "homepage": "https://github.com/rashidshafeev/metalamp-edu-2#readme"
+}
