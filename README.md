@@ -1,0 +1,1 @@
+# MetaLamp education, task 2
