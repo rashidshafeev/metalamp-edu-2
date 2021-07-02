@@ -1,4 +1,5 @@
 const path = require('path');
+// const fs = require('fs');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -9,6 +10,20 @@ const ImageminPlugin = require('imagemin-webpack');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
+
+// const PATHS = {
+//   src: path.join(__dirname, './src'),
+//   dist: path.join(__dirname, './dist'),
+//   assets: 'assets/'
+// }
+
+// const PAGES_DIR = `${PATHS.src}/${PATHS.assets}pages/`;
+// const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+
+// PAGES.map(page => new HtmlWebpackPlugin ({
+//   template: `${PAGES_DIR}/${page}`,
+//   filename: `./${page.replace(/\.pug/,'.html')}`
+// })
 
 const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 
@@ -32,7 +47,7 @@ const optimization = () => {
 const plugins = () => {
   const basePlugins = [
     new HTMLWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.html'),
+      template: path.resolve(__dirname, 'src/pug/pages/index.pug'),
       filename: 'index.html',
       minify: {
         collapseWhitespace: isProd
