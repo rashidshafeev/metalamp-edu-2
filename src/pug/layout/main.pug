@@ -4,17 +4,17 @@ block variables
 doctype html
 html(lang='en')
   head
-    meta(charset='utf-8')
-    title #{title}
-    meta(name="description", content=description)
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title TOXIN
+    link(rel='shortcut icon' href='../../img/logo.svg' type='image/x-icon')
     block head
 
   body(class=pageClass)
-    .wrapper
-      #app
-        include ../includes/modules/header
-        .content-wrapper
-          block content
-        include ../includes/modules/footer
+    //- #app
+      //- include ../includes/modules/header
+    block content
+      //- include ../includes/modules/footer
 
     block script

@@ -6,14 +6,93 @@ block variables
   - var pageClass = 'index-page';
 
 block content
-  section
-    .container
-      +item('item title ololo', 'item descr')
-      +item('item title', 'item descr')
-      +item('item title', 'item descr')
-      .test_block
-        img(src='../../img/logo.svg')
-  example-component
+  //- section.page-header
+  //-   h1 Colors&Types
+  section.page-colors
+    section.main-colors
+      img.logo(src='../../img/logo.svg' alt='')
+      .colors
+        .color
+          .color-sample.darkshade100
+          .color-description
+            .color-name 
+              h2 Dark Shade 100%
+            .color-code #1F2041
+        .color
+          .color-sample.darkshade75
+          .color-description
+            .color-name
+              h2 Dark Shade 75%
+            .color-code #1F2041
+        .color
+          .color-sample.darkshade50
+          .color-description
+            .color-name
+              h2 Dark Shade 50%
+            .color-code #1F2041
+        .color
+          .color-sample.darkshade25
+          .color-description
+            .color-name
+              h2 Dark Shade 25%
+            .color-code #1F2041
+        .color
+          .color-sample.darkshade5
+          .color-description
+            .color-name
+              h2 Dark Shade 5%
+            .color-code #1F2041
+        .color
+          .color-sample.purple
+          .color-description
+            .color-name
+              h2 Purple
+            .color-code #BC9CFF
+        .color
+          .color-sample.green
+          .color-description
+            .color-name
+              h2 Green
+            .color-code #6FCF97
+      .fonts
+        .font-sample-wrapper
+          .font-type
+            h1 H1
+          .font-sample-h1
+            h1 This one is the sub-section or widget title
+        .font-sample-wrapper
+          .font-type
+            h2 H2
+          .font-sample-h2
+            h2 Next one is the item title inside widgets
+        .font-sample-wrapper
+          .font-type
+            h3 H3
+          .font-sample
+            h3 This is a label or CTA text
+        .font-sample-wrapper
+          .font-type Body
+          .font-sample-body
+            | This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+  section.page-header
+    h1 Form elements
+  section.page-form-elements
+    section.main-form-elements
+      img.logo(src='../../img/logo.svg' alt='')
+      .column
+        .input-unfocused 
+          input(type="text").text-field
+      .column
+      .column
+
+  section.page-header
+    h1 Cards
+  section.page
+
+  section.page-header
+    h1 Headers&Footers
+  section.page
 
 
 block script
