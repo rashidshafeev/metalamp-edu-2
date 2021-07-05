@@ -78,13 +78,54 @@ block content
   section.page-header
     h1 Form elements
   section.page-form-elements
-    section.main-form-elements
-      img.logo(src='../../img/logo.svg' alt='')
-      .column
-        .input-unfocused 
-          input(type="text").text-field
-      .column
-      .column
+    img.logo(src='../../img/logo.svg' alt='')
+    .column
+      form(action='')
+        label(for='email')
+          h3 TEXT FIELD
+        input.textfield(type='text' placeholder='Email' name='email' id='')
+      form(action='')
+        .input-label
+          h3 DROP DOWN
+        .guests-dropdown
+          .guests-dropdown-text Сколько гостей?
+          img(src='../../img/expand_more.svg' alt='')
+        .dropdown-content
+          .guests-input-wrapper
+            .guests-input-caption
+              label(for='adults')
+              h3 Взрослые
+            .number-input-wrapper
+              button.minus-adults(disabled='') -
+              h3.counter-adults 0
+              input.input-adults(type='hidden' name='adults')
+              button.plus-adults +
+          .guests-input-wrapper
+            .guests-input-caption
+              label(for='childs')
+              h3 Дети
+            .number-input-wrapper
+              button.minus-childs(disabled='') -
+              h3.counter-childs 0
+              input.input-childs(type='hidden' name='adults')
+              button.plus-childs +
+          .guests-input-wrapper
+            .guests-input-caption
+              label(for='infants')
+              h3 Младенцы
+            .number-input-wrapper
+              button.minus-infants(disabled='') -
+              h3.counter-infants 0
+              input.input-infants(type='hidden' name='adults')
+              button.plus-infants +
+          .guests-input-buttons
+            button.guests-clear-button.hidden
+              h3 Очистить
+            button.guests-apply-button
+              h3 Применить
+    .column
+    .column
+
 
   section.page-header
     h1 Cards

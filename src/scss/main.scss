@@ -7,6 +7,14 @@
 @import "colors-fonts";
 @import "form-elements";
 
+body {
+  width: 1440px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgba(31, 32, 65, 0.75);
+  font-size: 14px;
+  line-height: 24px;
+}
+
 section.page-header {
   background: rgb(29, 29, 29);
   margin: 0;
@@ -17,3 +25,25 @@ section.page-header {
   }
 }
 
+h1 {
+  font-size: 24px;
+  color: $darkshade100;
+  line-height: 29px;
+}
+
+h2 {
+  font-size: 19px;
+  color: $darkshade100;
+  line-height: 23px;
+}
+
+h3 {
+  font-size: 12px; 
+  color: $darkshade100;
+  text-transform: uppercase;
+  line-height: 15px;
+}
+
+.hidden {
+  visibility: hidden;
+}

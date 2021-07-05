@@ -1,12 +1,136 @@
 section.page-form-elements {
   height: 1853px;
+  display: flex;
+  justify-content: space-around;
 }
+
 
 .column {
   margin-top: 140px;
+  width: 320px;
 }
 
 .main-form-elements {
   display: flex;
   justify-content: space-around;
+}
+
+.textfield {
+  @include input-default;
+  width: 100%;
+
+  &::placeholder {
+    @include input-text-default;
+  }
+
+  &:hover {
+    &::placeholder {
+      @include input-text-active;
+    }
+
+    @include input-active;
+  }
+
+}
+
+.guests-dropdown {
+  @include input-default;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.5s;
+
+  &::placeholder {
+    @include input-text-default;
+  }
+
+  &:hover {
+    &::placeholder {
+      @include input-text-active;
+    }
+
+    @include input-active;
+  }
+}
+
+.guests-dropdown__active {
+  border-color: $darkshade50;
+  border-radius: 4px 4px 0 0;
+}
+
+.dropdown-content {
+  border: 1px solid $darkshade50;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+
+  box-shadow: 0px 10px 20px $darkshade5;
+
+  overflow: hidden;
+
+  transform: scaleY(0);
+  transform-origin: top;
+
+  transition: all 0.5s;
+}
+
+.dropdown-content__active {
+  transform: scaleY(1);
+}
+
+
+.guests-input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 7px 7px 0 15px;
+}
+
+.number-input-wrapper {
+  display: flex;
+  align-items: center;
+
+  h3 {
+    width: 32px;
+    text-align: center;
+  }
+}
+
+.minus, .plus {
+  &-adults, &-childs, &-infants {
+    width: 30px;
+    height: 30px;
+
+    background: transparent;
+
+    font-size: 18px;
+    color: $darkshade50;
+
+    border: 1px solid $darkshade25;
+    border-radius: 22px;
+
+    &:disabled {
+      opacity: 0.38;
+    }
+  }
+}
+
+.guests-input {
+  width: 30px;
+}
+
+.guests-input-buttons {
+  margin: 19px 7px 13px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.guests-apply-button, .guests-clear-button {
+  padding: 0;
+  background: transparent;
+  border: none;
+
+  h3 {
+    color: $purple;
+  }
 }

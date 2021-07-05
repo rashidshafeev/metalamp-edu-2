@@ -57,11 +57,11 @@ const plugins = () => {
     new MiniCssExtractPlugin({
       filename: `./css/${filename('css')}`
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {from: path.resolve(__dirname, 'src/assets') , to: path.resolve(__dirname, 'dist')}
-      ]
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {from: path.resolve(__dirname, 'src/assets') , to: path.resolve(__dirname, 'dist')}
+    //   ]
+    // }),
   ];
 
   if (isProd) {
@@ -117,12 +117,17 @@ module.exports = {
     rules: [
       {
         test: /\.pug$/,
-        loader: 'pug-loader'
+        use: [
+          // "file-loader?name=[name].html",
+          // "extract-loader",
+          "html-loader",
+          "pug-html-loader"
+        ]
       },
-      {
-        test: /\.html$/,
-        loader: 'html-loader',
-      },
+      // {
+      //   test: /\.html$/,
+      //   loader: 'html-loader',
+      // },
       {
         test: /\.css$/i,
         use: [
