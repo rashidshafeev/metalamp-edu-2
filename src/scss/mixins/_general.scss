@@ -1,0 +1,19 @@
+@mixin input-default {
+  border: 1px solid $darkshade25;
+  border-radius: 4px;
+
+  padding: 13px 15px;
+  margin: 5px 0 0 0;
+}
+
+@mixin input-active {
+  border: 1px solid $darkshade50;
+}
+
+@mixin input-text-default {
+  color: $darkshade25;
+}
+
+@mixin input-text-active {
+  color: $darkshade75;
+}
